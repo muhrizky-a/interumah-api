@@ -1,0 +1,30 @@
+POST {{$dotenv HOST}}:{{$dotenv PORT}}/users HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Gilbert",
+    "age": "40",
+    "phone": "081234567890",
+    "address": "-",
+    "job": "-",
+    "email": "gilbert@interumah.id",
+    "password": "1",
+    "confirmPassword": "1",
+    "role": "user"
+}
+
+###
+
+GET {{$dotenv HOST}}:{{$dotenv PORT}}/users HTTP/1.1
+
+###
+DELETE {{$dotenv HOST}}:{{$dotenv PORT}}/users/8 HTTP/1.1
+
+###
+POST {{$dotenv HOST}}:{{$dotenv PORT}}/auth HTTP/1.1
+content-type: application/json
+
+{
+    "email": "gilbert@interumah.id",
+    "password": "1"
+}
